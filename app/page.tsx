@@ -1,4 +1,10 @@
+"use client";
+
+import { useState } from "react";
+
 export default function Home() {
+  const [amount, setAmount] = useState("");
+
   return (
     <main>
       <div className="profile">
@@ -13,11 +19,17 @@ export default function Home() {
         </p >
 
         <div className="amount">
-          <button>RM5</button>
-          <button>RM10</button>
-          <button>RM20</button>
-          <button>RM50</button>
+          <button onClick={() => setAmount("RM5")}>RM5</button>
+          <button onClick={() => setAmount("RM10")}>RM10</button>
+          <button onClick={() => setAmount("RM20")}>RM20</button>
+          <button onClick={() => setAmount("RM50")}>RM50</button>
         </div>
+
+        {amount && (
+          <p>
+            You selected {amount} ❤️
+          </p >
+        )}
 
         <button className="donate">
           🟢 Touch 'n Go
@@ -30,20 +42,19 @@ export default function Home() {
         <button className="donate">
           🟡 PayPal
         </button>
-<img
-  src="/tng.png"
-  alt="Touch n Go QR"
-  className="qr"
-/>
 
-<img
-  src="/duitnow.png"
-  alt="DuitNow QR"
-  className="qr"
-/>
-        <div className="social">
-          TikTok · Instagram · Telegram
-        </div>
+        <img
+          src="/tng.png"
+          alt="Touch n Go QR"
+          className="qr"
+        />
+
+        <img
+          src="/duitnow.png"
+          alt="DuitNow QR"
+          className="qr"
+        />
+
       </div>
     </main>
   );
