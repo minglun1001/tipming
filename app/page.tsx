@@ -34,14 +34,14 @@ export default function Home() {
 
         <button
           className="donate"
-          onClick={() => setQr("/tng.png")}
+          onClick={() => setQr("/tng.jpg")}
         >
           🟢 Touch 'n Go
         </button>
 
         <button
           className="donate"
-          onClick={() => setQr("/duitnow.png")}
+          onClick={() => setQr("/duitnow.jpg")}
         >
           🔵 DuitNow
         </button>
