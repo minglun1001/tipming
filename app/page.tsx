@@ -30,7 +30,17 @@ export default function Home() {
         <button className="donate">
           🟡 PayPal
         </button>
+<img
+  src="/tng.png"
+  alt="Touch n Go QR"
+  className="qr"
+/>
 
+<img
+  src="/duitnow.png"
+  alt="DuitNow QR"
+  className="qr"
+/>
         <div className="social">
           TikTok · Instagram · Telegram
         </div>
