@@ -8,15 +8,6 @@ export default function Home() {
 
   return (
     <main>
-"use client";
-
-import { useState } from "react";
-
-export default function Home() {
-  const [amount, setAmount] = useState("");
-
-  return (
-    <main>
       <div className="profile">
         <div className="avatar">
           M
@@ -42,30 +33,31 @@ export default function Home() {
         )}
 
         <button
-  className="donate"
-  onClick={() => setQr("/tng.png")}
->
-  🟢 Touch 'n Go
-</button>
+          className="donate"
+          onClick={() => setQr("/tng.png")}
+        >
+          🟢 Touch 'n Go
+        </button>
 
         <button
-  className="donate"
-  onClick={() => setQr("/duitnow.png")}
->
-  🔵 DuitNow
-</button>
+          className="donate"
+          onClick={() => setQr("/duitnow.png")}
+        >
+          🔵 DuitNow
+        </button>
 
         <button className="donate">
           🟡 PayPal
         </button>
 
-       {qr && (
-  <img
-    src={qr}
-    alt="QR Code"
-    className="qr"
-  />
-)}
+        {qr && (
+          <img
+            src={qr}
+            alt="QR Code"
+            className="qr"
+          />
+        )}
+
       </div>
     </main>
   );
