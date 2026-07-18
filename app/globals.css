@@ -13,37 +13,75 @@ body {
 main {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 30px;
+  padding: 25px;
+  background:
+    radial-gradient(circle at top, #222, #000 60%);
+}
+
+.profile {
+  width: 100%;
+  max-width: 420px;
   text-align: center;
+  padding: 35px 25px;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+  font-weight: bold;
+  background: linear-gradient(45deg,#ff0050,#00f2ea);
 }
 
 h1 {
-  font-size: 42px;
-  margin-bottom: 10px;
+  margin-top: 20px;
+  font-size: 36px;
 }
 
 p {
-  color: #aaa;
-  margin-bottom: 40px;
+  color: #bbb;
+  margin-bottom: 30px;
+}
+
+.amount {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
 }
 
 button {
-  width: 280px;
-  padding: 16px;
-  margin: 10px;
   border: none;
+  padding: 16px;
   border-radius: 30px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  background: linear-gradient(90deg, #ff0050, #00f2ea);
   color: white;
-  transition: 0.3s;
+  background: linear-gradient(90deg,#ff0050,#00f2ea);
+  transition: .3s;
 }
 
 button:hover {
   transform: scale(1.05);
+}
+
+.donate {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.social {
+  margin-top: 30px;
+  color: #aaa;
 }
