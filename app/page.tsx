@@ -4,6 +4,16 @@ import { useState } from "react";
 
 export default function Home() {
   const [amount, setAmount] = useState("");
+  const [qr, setQr] = useState("");
+
+  return (
+    <main>
+"use client";
+
+import { useState } from "react";
+
+export default function Home() {
+  const [amount, setAmount] = useState("");
 
   return (
     <main>
@@ -31,30 +41,31 @@ export default function Home() {
           </p >
         )}
 
-        <button className="donate">
-          🟢 Touch 'n Go
-        </button>
+        <button
+  className="donate"
+  onClick={() => setQr("/tng.png")}
+>
+  🟢 Touch 'n Go
+</button>
 
-        <button className="donate">
-          🔵 DuitNow
-        </button>
+        <button
+  className="donate"
+  onClick={() => setQr("/duitnow.png")}
+>
+  🔵 DuitNow
+</button>
 
         <button className="donate">
           🟡 PayPal
         </button>
 
-        <img
-          src="/tng.png"
-          alt="Touch n Go QR"
-          className="qr"
-        />
-
-        <img
-          src="/duitnow.png"
-          alt="DuitNow QR"
-          className="qr"
-        />
-
+       {qr && (
+  <img
+    src={qr}
+    alt="QR Code"
+    className="qr"
+  />
+)}
       </div>
     </main>
   );
